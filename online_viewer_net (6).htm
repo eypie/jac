@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📘 Computer Fundamentals – Simple Notes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f9fc;
+            color: #1e2b37;
+            line-height: 1.6;
+            padding: 30px 20px;
+        }
+        .page {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 12px 30px rgba(0,20,30,0.1);
+            padding: 40px 45px;
+        }
+        h1 {
+            font-size: 2.4rem;
+            color: #0b3954;
+            border-left: 8px solid #2a9d8f;
+            padding-left: 25px;
+            margin: 0 0 15px 0;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+        }
+        h2 {
+            font-size: 1.9rem;
+            color: #1e6091;
+            margin: 40px 0 15px 0;
+            font-weight: 550;
+            border-bottom: 2px solid #cbd5e1;
+            padding-bottom: 6px;
+        }
+        h3 {
+            font-size: 1.5rem;
+            color: #1a759f;
+            margin: 30px 0 12px 0;
+        }
+        h4 {
+            font-size: 1.2rem;
+            color: #2d6a4f;
+            margin: 22px 0 8px 0;
+        }
+        p, li {
+            font-size: 1.1rem;
+            color: #1e2f3b;
+        }
+        .example-box {
+            background: #e9f5f3;
+            border-left: 6px solid #2a9d8f;
+            padding: 18px 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+            font-weight: 450;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+        .example-box strong {
+            color: #0b5e4b;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0 30px 0;
+            font-size: 1.05rem;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.05);
+        }
+        th {
+            background-color: #1b4d6e;
+            color: white;
+            font-weight: 600;
+            padding: 14px 12px;
+            text-align: left;
+            font-size: 1.1rem;
+        }
+        td {
+            background-color: #ffffff;
+            padding: 12px 15px;
+            border-bottom: 1px solid #d7e3ed;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        tr:hover td {
+            background-color: #f2f9ff;
+        }
+        .note {
+            background: #fef4e6;
+            border-radius: 18px;
+            padding: 20px;
+            margin: 30px 0;
+            border: 1px solid #ffcf9a;
+        }
+        .definition {
+            background: #e2f0fa;
+            padding: 14px 22px;
+            border-radius: 30px;
+            font-weight: 500;
+            margin: 20px 0;
+            display: inline-block;
+            border: 1px dashed #2c7da0;
+        }
+        ul, ol {
+            margin: 15px 0 20px 25px;
+        }
+        li {
+            margin: 8px 0;
+        }
+        hr {
+            margin: 40px 0 10px 0;
+            border: 1px solid #cbd5e1;
+        }
+        .chip {
+            background: #1e3c4f;
+            color: white;
+            font-weight: 600;
+            padding: 4px 15px;
+            border-radius: 40px;
+            display: inline-block;
+            font-size: 0.9rem;
+            letter-spacing: 0.3px;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #597a8b;
+            font-size: 1rem;
+            border-top: 1px dashed #bcd4e6;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- Main heading -->
+    <h1>📟 Unit 1: Computer Fundamentals</h1>
+    <p style="font-size:1.25rem; margin-bottom:30px;">Everything you need — in plain, simple language.</p>
+
+    <!-- ========== CHAPTER 1 ========== -->
+    <h2>🌟 Chapter 1: Computer Fundamentals</h2>
+
+    <h3>1. What is a Computer?</h3>
+    <p>A computer is a <strong>machine that works with information</strong>.</p>
+    <p>It does 4 simple things:</p>
+    <ul>
+        <li><strong>1. Takes input</strong> (data)</li>
+        <li><strong>2. Processes it</strong> (thinks/calculates)</li>
+        <li><strong>3. Gives output</strong> (result)</li>
+        <li><strong>4. Stores it</strong> (remembers it)</li>
+    </ul>
+    <p>That’s it. That’s the whole computer.</p>
+
+    <div class="example-box">
+        <strong>🔹 Real Life Example:</strong><br>
+        You enter: 45 + 55<br>
+        Computer calculates → It shows: 100<br>
+        And if you save it, it stores it.
+    </div>
+
+    <h4>💡 Information Processing Cycle</h4>
+    <p style="font-size:1.4rem; font-weight:550; background:#d9eef5; padding:10px 20px; border-radius:50px; display:inline-block;">Input → Process → Output → Storage</p>
+    <p><em>Example: You type marks → Computer calculates total → Shows result → Saves file</em></p>
+
+    <h3>2. Parts of a Computer</h3>
+    <p><strong>1️⃣ Input Devices</strong> – give data to computer.<br> Examples: Keyboard, Mouse, Scanner, Microphone.</p>
+    <p><strong>2️⃣ Output Devices</strong> – show the result.<br> Examples: Monitor, Printer, Speaker.</p>
+    <p><strong>3️⃣ CPU (Central Processing Unit)</strong> – the <strong>brain</strong> of the computer.</p>
+
+    <h4>CPU has 3 parts:</h4>
+    <ul>
+        <li><strong>a) ALU (Arithmetic Logic Unit):</strong> does addition, subtraction, comparison, logical (true/false). <em>If you calculate 5+7, ALU does it.</em></li>
+        <li><strong>b) Control Unit (CU):</strong> controls everything – tells memory, input, output what to do.</li>
+        <li><strong>c) Registers:</strong> very small fast memory inside CPU.</li>
+    </ul>
+
+    <h3>3. Types of Computers</h3>
+    <table>
+        <tr><th>Type</th><th>Description</th></tr>
+        <tr><td>🔹 Super Computer</td><td>Extremely powerful, used for weather prediction, space research</td></tr>
+        <tr><td>🔹 Mainframe Computer</td><td>Used in banks, railways</td></tr>
+        <tr><td>🔹 Mini Computer</td><td>Medium size companies</td></tr>
+        <tr><td>🔹 Micro Computer</td><td>Your laptop, your desktop</td></tr>
+    </table>
+
+    <!-- ========== CHAPTER 2 ========== -->
+    <h2>🌟 Chapter 2: Software Concept</h2>
+    <p><strong>Software</strong> = Set of instructions given to computer.</p>
+    <h3>3 main types:</h3>
+    <ul>
+        <li><strong>1️⃣ System Software:</strong> controls computer. Example: Windows, Linux (Operating System).</li>
+        <li><strong>2️⃣ Application Software:</strong> programs for users. Example: MS Word, Excel, Photoshop.</li>
+        <li><strong>3️⃣ Utility Software:</strong> maintenance. Example: Antivirus, Disk cleanup.</li>
+    </ul>
+
+    <h3>Language Translators</h3>
+    <table>
+        <tr><th>Translator</th><th>Function</th></tr>
+        <tr><td>Assembler</td><td>Converts assembly language to machine language.</td></tr>
+        <tr><td>Compiler</td><td>Converts whole program at once.</td></tr>
+        <tr><td>Interpreter</td><td>Converts line by line.</td></tr>
+    </table>
+
+    <!-- ========== CHAPTER 3 ========== -->
+    <h2>🌟 Chapter 3: Operating System</h2>
+    <p>Operating System (OS) is the most important software. It is a bridge between: <strong>User ↔ Hardware</strong>.</p>
+    <p>Example: When you click mouse, OS tells hardware what to do.</p>
+    <h4>Functions of OS:</h4>
+    <ol>
+        <li>Memory Management</li>
+        <li>File Management</li>
+        <li>Process Management</li>
+        <li>Device Management</li>
+    </ol>
+    <p>Examples: Windows, Linux, macOS.</p>
+
+    <!-- ========== CHAPTER 4 ========== -->
+    <h2>🌟 Chapter 4: Number System</h2>
+    <p>Computers understand only <strong>0 and 1</strong> → <strong>Binary (Base 2)</strong>.</p>
+    <h4>4 number systems:</h4>
+    <table>
+        <tr><th>Name</th><th>Base</th><th>Digits</th></tr>
+        <tr><td>Decimal</td><td>10</td><td>0–9</td></tr>
+        <tr><td>Binary</td><td>2</td><td>0,1</td></tr>
+        <tr><td>Octal</td><td>8</td><td>0–7</td></tr>
+        <tr><td>Hexadecimal</td><td>16</td><td>0–9, A–F</td></tr>
+    </table>
+
+    <h3>Important Terms</h3>
+    <ul>
+        <li><strong>Bit</strong> – smallest unit (0 or 1).</li>
+        <li><strong>Nibble</strong> – group of 4 bits. Example: 1010.</li>
+        <li><strong>Byte</strong> – 8 bits = 1 byte.</li>
+    </ul>
+
+    <h3>Memory Units</h3>
+    <table>
+        <tr><th>Unit</th><th>Size</th></tr>
+        <tr><td>1 Byte</td><td>8 bits</td></tr>
+        <tr><td>1 KB</td><td>1024 bytes</td></tr>
+        <tr><td>1 MB</td><td>1024 KB</td></tr>
+        <tr><td>1 GB</td><td>1024 MB</td></tr>
+    </table>
+
+    <!-- ========== CHAPTER 5 ========== -->
+    <h2>🌟 Chapter 5: Microprocessor</h2>
+    <p>Microprocessor is a small chip – the actual brain chip of computer. It performs calculations & logical operations.</p>
+
+    <h3>Generations of Computer</h3>
+    <table>
+        <tr><th>Generation</th><th>Technology</th><th>Characteristic</th></tr>
+        <tr><td>1st</td><td>Vacuum Tubes</td><td>Very large, slow</td></tr>
+        <tr><td>2nd</td><td>Transistors</td><td>Smaller and faster</td></tr>
+        <tr><td>3rd</td><td>Integrated Circuits (IC)</td><td>Even smaller, faster</td></tr>
+        <tr><td colspan="3" style="background:#f0f7fc;">Each generation became smaller, faster, more powerful.</td></tr>
+    </table>
+
+    <!-- ========== CHAPTER 6 ========== -->
+    <h2>🌟 Chapter 6: Memory and Input Devices</h2>
+    <h3>Two main memory types:</h3>
+    <ul>
+        <li><strong>1️⃣ RAM (Random Access Memory):</strong> temporary, data lost when power off, very fast. <em>Example: Chrome loads in RAM.</em></li>
+        <li><strong>2️⃣ ROM (Read Only Memory):</strong> permanent, stores startup instructions.</li>
+    </ul>
+    <h3>Storage Devices:</h3>
+    <p>Hard Disk, SSD, Pen Drive, CD/DVD.</p>
+
+    <!-- ========== ALGORITHM & FLOWCHART ========== -->
+    <h2>🌟 Algorithm and Flowchart</h2>
+    <p>Before writing any program, we first plan.</p>
+    <div class="definition">📋 <strong>Algorithm:</strong> Step-by-step solution to solve a problem.</div>
+    <p>Example:</p>
+    <ol>
+        <li>Start</li>
+        <li>Input numbers</li>
+        <li>Add numbers</li>
+        <li>Show result</li>
+        <li>Stop</li>
+    </ol>
+
+    <h3>Flowchart</h3>
+    <p>Diagram representation of algorithm.</p>
+    <h4>Important symbols:</h4>
+    <table>
+        <tr><th>Symbol</th><th>Meaning</th></tr>
+        <tr><td>Oval</td><td>Start / Stop</td></tr>
+        <tr><td>Rectangle</td><td>Process</td></tr>
+        <tr><td>Parallelogram</td><td>Input / Output</td></tr>
+        <tr><td>Diamond (Rhombus)</td><td>Decision</td></tr>
+    </table>
+
+    <!-- one more extra summary table for quick glance -->
+    <hr>
+    <h3 style="color:#0f4b5e;">📌 Quick reference – units & facts</h3>
+    <table>
+        <tr><th>Concept</th><th>Details</th></tr>
+        <tr><td>CPU parts</td><td>ALU, CU, Registers</td></tr>
+        <tr><td>Language translators</td><td>Assembler, Compiler, Interpreter</td></tr>
+        <tr><td>Base of binary</td><td>2</td></tr>
+        <tr><td>1 nibble</td><td>4 bits</td></tr>
+        <tr><td>1 byte</td><td>8 bits</td></tr>
+        <tr><td>OS examples</td><td>Windows, Linux, macOS</td></tr>
+    </table>
+
+    <div class="note">
+        <strong>💡 Remember:</strong> Computer = input → process → output → storage. <br> 
+        Software = instructions. OS = manager. CPU = brain.
+    </div>
+
+    <footer>
+        ⚡ Simple, clear, complete — chapter notes from Unit 1 · Computer Fundamentals
+    </footer>
+</div>
+</body>
+</html>
