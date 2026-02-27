@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📘 Unit 2 – Programming Methodology (simple notes)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f2f7fb;
+            color: #1d2d3c;
+            line-height: 1.6;
+            padding: 30px 20px;
+        }
+        .page {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 20px 40px rgba(0,25,45,0.12);
+            padding: 40px 48px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #0b4f6c;
+            border-left: 10px solid #1e88b3;
+            padding-left: 25px;
+            margin: 0 0 12px 0;
+            font-weight: 650;
+        }
+        h2 {
+            font-size: 2.1rem;
+            color: #1d5e8f;
+            margin: 48px 0 20px 0;
+            border-bottom: 3px solid #c8ddec;
+            padding-bottom: 8px;
+        }
+        h3 {
+            font-size: 1.7rem;
+            color: #1f6d93;
+            margin: 35px 0 15px 0;
+        }
+        h4 {
+            font-size: 1.3rem;
+            color: #2f5e4a;
+            margin: 28px 0 8px 0;
+        }
+        p, li {
+            font-size: 1.1rem;
+            color: #1f3a4b;
+        }
+        .highlight-block {
+            background: #e2f0f9;
+            border-left: 8px solid #1b98c6;
+            padding: 20px 28px;
+            border-radius: 18px;
+            margin: 30px 0;
+            font-weight: 450;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.02);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0 30px 0;
+            font-size: 1.05rem;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0,35,60,0.08);
+        }
+        th {
+            background-color: #144e6b;
+            color: white;
+            font-weight: 600;
+            padding: 14px 16px;
+            text-align: left;
+        }
+        td {
+            background-color: #ffffff;
+            padding: 12px 18px;
+            border-bottom: 1px solid #bfd9ec;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        tr:hover td {
+            background-color: #edf7fd;
+        }
+        .note {
+            background: #fef2db;
+            border-radius: 24px;
+            padding: 22px 28px;
+            margin: 35px 0;
+            border: 1px solid #f8c98e;
+        }
+        .definition {
+            background: #ddeeff;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 550;
+            margin: 20px 0;
+            display: inline-block;
+            border: 1px dashed #256a8f;
+            font-size: 1.15rem;
+        }
+        ul, ol {
+            margin: 15px 0 20px 30px;
+        }
+        li {
+            margin: 8px 0;
+        }
+        hr {
+            margin: 40px 0 20px 0;
+            border: 2px solid #b6d6ea;
+        }
+        .symbol-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            background: #edf4fa;
+            padding: 22px;
+            border-radius: 30px;
+            margin: 20px 0;
+        }
+        .symbol-item {
+            background: white;
+            padding: 10px 25px;
+            border-radius: 40px;
+            font-weight: 600;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            color: #597a8b;
+            font-size: 1rem;
+            border-top: 1px dashed #aac7df;
+            padding-top: 25px;
+        }
+        .badge {
+            background: #287271;
+            color: white;
+            border-radius: 30px;
+            padding: 4px 16px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- MAIN UNIT HEADER -->
+    <h1>🌟 UNIT – II : PROGRAMMING METHODOLOGY</h1>
+    <p style="font-size:1.35rem; background: #e2f0f6; padding: 12px 25px; border-radius: 60px;">
+        👉 How to think step-by-step to solve a problem using a computer.
+    </p>
+
+    <!-- ========== CHAPTER 7 : PROGRAMMING METHODOLOGY ========== -->
+    <h2>📘 Chapter 7 : Programming Methodology</h2>
+
+    <h3>1️⃣ What is Programming?</h3>
+    <p>Giving clear, step-by-step instructions to a computer so it can solve a problem.</p>
+    <ul>
+        <li><strong>Clear instructions</strong> → correct result</li>
+        <li><strong>Confusing</strong> → wrong result</li>
+        <li><strong>Incomplete</strong> → error</li>
+    </ul>
+    <p>Programming is mainly about <strong>thinking clearly</strong>.</p>
+
+    <h3>2️⃣ What is a Problem in Programming?</h3>
+    <p>A problem is something we want the computer to solve (e.g., add numbers, find largest, even/odd).</p>
+    <p>Every programming problem has <strong>3 parts</strong>:</p>
+    <table>
+        <tr><th>Part</th><th>Description</th></tr>
+        <tr><td>1. Input</td><td>What we give to computer</td></tr>
+        <tr><td>2. Process</td><td>What computer does</td></tr>
+        <tr><td>3. Output</td><td>What computer shows</td></tr>
+    </table>
+    <p><strong>👉 IPO Cycle (Input – Process – Output)</strong><br> Example: Input → 5 and 3, Process → add them, Output → 8.</p>
+
+    <h3>3️⃣ Steps in Program Development</h3>
+    <ol style="font-weight:500;">
+        <li><strong>Problem Definition</strong> – understand requirement, input, output.</li>
+        <li><strong>Analysis</strong> – think about formula, conditions, repetition.</li>
+        <li><strong>Algorithm</strong> – write solution in simple English steps.</li>
+        <li><strong>Flowchart</strong> – diagram representation of algorithm.</li>
+        <li><strong>Coding</strong> – convert into programming language (C++).</li>
+        <li><strong>Testing and Debugging</strong> – run, find mistakes, fix.</li>
+    </ol>
+
+    <h4>🔹 Algorithm Example (sum of two numbers)</h4>
+    <div class="highlight-block">
+        1. Start<br>
+        2. Read two numbers<br>
+        3. Add them<br>
+        4. Display result<br>
+        5. Stop
+    </div>
+    <p><strong>Properties of algorithm:</strong> steps clear, must finish (finite), correct order, no confusion.</p>
+
+    <h4>🔹 Flowchart symbols</h4>
+    <div class="symbol-list">
+        <span class="symbol-item">⚪ Oval → Start/Stop</span>
+        <span class="symbol-item">▭ Rectangle → Process</span>
+        <span class="symbol-item">▱ Parallelogram → Input/Output</span>
+        <span class="symbol-item">◇ Diamond → Decision</span>
+    </div>
+
+    <h3>4️⃣ Characteristics of a Good Program</h3>
+    <ul>
+        <li>✔ Correct (right answer)</li>
+        <li>✔ Clear (easy to understand)</li>
+        <li>✔ Efficient (no waste of time/memory)</li>
+        <li>✔ Reliable (works every time)</li>
+        <li>✔ User-friendly (easy for user)</li>
+    </ul>
+
+    <h3>5️⃣ Types of Errors</h3>
+    <table>
+        <tr><th>Error type</th><th>Explanation</th><th>Example</th></tr>
+        <tr><td>1. Syntax Error</td><td>Grammar mistake in code</td><td>Missing semicolon</td></tr>
+        <tr><td>2. Run-time Error</td><td>Program crashes during execution</td><td>Divide by zero</td></tr>
+        <tr><td>3. Logical Error</td><td>Program runs but answer is wrong</td><td>Using + instead of *</td></tr>
+    </table>
+    <p>Logical error is hardest to find.</p>
+
+    <h3>6️⃣ Language Processors</h3>
+    <table>
+        <tr><th>Processor</th><th>Function</th></tr>
+        <tr><td><strong>Compiler</strong></td><td>Converts entire program at once. If errors, shows list. Faster execution.</td></tr>
+        <tr><td><strong>Interpreter</strong></td><td>Converts line by line, stops at first error. Slower.</td></tr>
+        <tr><td><strong>Assembler</strong></td><td>Converts assembly language to machine language.</td></tr>
+    </table>
+
+    <!-- ========== CHAPTER 8 : PROBLEM SOLVING – METHODOLOGY AND TECHNOLOGY ========== -->
+    <h2>📘 Chapter 8 : Problem Solving – Methodology and Technology</h2>
+    <p class="definition">How program flow is controlled – decisions & repetition.</p>
+
+    <h3>1️⃣ Control Structures</h3>
+    <p>Control structure decides which statement runs next.</p>
+    <table>
+        <tr><th>Type</th><th>Name</th><th>Description</th></tr>
+        <tr><td>1.</td><td>Sequence</td><td>Statements run one after another (default).</td></tr>
+        <tr><td>2.</td><td>Selection</td><td>Decision making (if, if-else, switch).</td></tr>
+        <tr><td>3.</td><td>Iteration</td><td>Loops (while, do-while, for).</td></tr>
+    </table>
+
+    <h4>🔹 1. Sequence Structure</h4>
+    <p>Step1 → Step2 → Step3. No skipping.</p>
+
+    <h4>🔹 2. Selection Structure (Decision Making)</h4>
+    <p>Example: if marks > 40 → Pass, else → Fail.</p>
+    <ul>
+        <li><strong>if statement:</strong> condition true → executes block, false → skips.</li>
+        <li><strong>if-else:</strong> one block if true, another if false.</li>
+        <li><strong>switch:</strong> many choices (1→Monday, 2→Tuesday…). Default optional.</li>
+    </ul>
+
+    <h4>🔹 3. Iteration Structure (Loops)</h4>
+    <p>Repeat statements many times.</p>
+    <table>
+        <tr><th>Loop</th><th>Type</th><th>Description</th></tr>
+        <tr><td>while</td><td>Entry-controlled</td><td>condition checked first – may not run.</td></tr>
+        <tr><td>do-while</td><td>Exit-controlled</td><td>runs at least once, then checks.</td></tr>
+        <tr><td>for</td><td>Entry-controlled</td><td>used when repetitions known (init; condition; update).</td></tr>
+    </table>
+
+    <h3>Loop Control Elements</h3>
+    <p>Every loop has: <span style="background:#d1e6f5; padding:3px 18px; border-radius:30px;">Initialization</span> → <span style="background:#d1e6f5; padding:3px 18px; border-radius:30px;">Condition</span> → <span style="background:#d1e6f5; padding:3px 18px; border-radius:30px;">Updation</span></p>
+
+    <h4>Empty Loop</h4>
+    <p>Loop with no body: <code>for(i=0; i&lt;5; i++);</code> – called empty loop.</p>
+
+    <h4>Break Statement</h4>
+    <p>Stops loop immediately, terminates entire loop.</p>
+
+    <h4>goto Statement</h4>
+    <p>Transfers control to a labeled statement. Not recommended, but important for understanding.</p>
+
+    <h3>Algorithm vs Flowchart Difference</h3>
+    <table>
+        <tr><th>Algorithm</th><th>Flowchart</th></tr>
+        <tr><td>Written in words</td><td>Symbols / diagram</td></tr>
+        <tr><td>Easy to modify</td><td>Easy to visualize</td></tr>
+    </table>
+
+    <!-- extra summary note box -->
+    <div class="note">
+        <strong>📌 Quick recap – control flow:</strong><br>
+        • Sequence → normal order<br>
+        • Selection → if / else / switch<br>
+        • Iteration → while, do-while, for<br>
+        • break → exit loop<br>
+        • goto → jump (avoid in modern code)
+    </div>
+
+    <!-- mini comparison table for errors -->
+    <h3>🧪 Error types – quick view</h3>
+    <table>
+        <tr><th>Error</th><th>Detection time</th><th>Example</th></tr>
+        <tr><td>Syntax</td><td>at compilation</td><td>missing ;</td></tr>
+        <tr><td>Run-time</td><td>during execution</td><td>division by zero</td></tr>
+        <tr><td>Logical</td><td>after execution (wrong output)</td><td>+ instead of *</td></tr>
+    </table>
+
+    <!-- one more clarity on language processors -->
+    <h3>⚙️ Language processors at a glance</h3>
+    <table>
+        <tr><th>Processor</th><th>Input</th><th>Output</th></tr>
+        <tr><td>Compiler</td><td>High-level code (C++)</td><td>Machine code (entire file)</td></tr>
+        <tr><td>Interpreter</td><td>High-level code</td><td>Executes line by line</td></tr>
+        <tr><td>Assembler</td><td>Assembly language</td><td>Machine language</td></tr>
+    </table>
+
+    <hr>
+    <p style="font-size:1.2rem; background:#ebf7f4; padding:14px; border-radius: 60px; text-align:center;">
+        ✅ Programming methodology = plan + control + clarity
+    </p>
+
+    <footer>
+        UNIT II complete – Programming methodology, errors, control structures, loops & decision making.
+    </footer>
+</div>
+</body>
+</html>
