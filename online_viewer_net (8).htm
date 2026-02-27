@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📘 Unit 3 – Introduction to C++ (simple & detailed)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f0f6fa;
+            color: #1e3a4d;
+            line-height: 1.7;
+            padding: 30px 20px;
+        }
+        .page {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 32px;
+            box-shadow: 0 20px 45px rgba(8, 40, 60, 0.15);
+            padding: 45px 55px;
+        }
+        h1 {
+            font-size: 2.7rem;
+            color: #0a4b6e;
+            border-left: 12px solid #2693b8;
+            padding-left: 30px;
+            margin: 0 0 18px 0;
+            font-weight: 650;
+            letter-spacing: -0.5px;
+        }
+        h2 {
+            font-size: 2.2rem;
+            color: #1a6080;
+            margin: 55px 0 25px 0;
+            border-bottom: 4px solid #b9daf0;
+            padding-bottom: 10px;
+        }
+        h3 {
+            font-size: 1.9rem;
+            color: #1d7296;
+            margin: 40px 0 20px 0;
+        }
+        h4 {
+            font-size: 1.5rem;
+            color: #266b54;
+            margin: 30px 0 12px 0;
+        }
+        h5 {
+            font-size: 1.25rem;
+            color: #2d618c;
+            margin: 22px 0 8px 0;
+        }
+        p, li {
+            font-size: 1.15rem;
+            color: #1e3c4f;
+        }
+        .explain-box {
+            background: #e6f3fc;
+            border-left: 10px solid #1794c1;
+            padding: 22px 30px;
+            border-radius: 24px;
+            margin: 30px 0;
+            box-shadow: 0 5px 12px rgba(0,35,60,0.05);
+            font-weight: 450;
+        }
+        .kid-friendly {
+            background: #fffae7;
+            border-radius: 28px;
+            padding: 18px 28px;
+            margin: 28px 0;
+            border: 2px dashed #f5b65b;
+        }
+        .kid-friendly strong {
+            color: #b45f1b;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0 35px 0;
+            font-size: 1.1rem;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 10px 22px rgba(0, 40, 65, 0.1);
+        }
+        th {
+            background-color: #195f7a;
+            color: white;
+            font-weight: 600;
+            padding: 16px 18px;
+            text-align: left;
+            font-size: 1.2rem;
+        }
+        td {
+            background-color: #ffffff;
+            padding: 14px 20px;
+            border-bottom: 1px solid #bfdff2;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        tr:hover td {
+            background-color: #edf8ff;
+        }
+        .code-block {
+            background: #1e2f3f;
+            color: #d4f0d4;
+            font-family: 'Courier New', monospace;
+            padding: 18px 24px;
+            border-radius: 22px;
+            font-size: 1.15rem;
+            margin: 25px 0;
+            border-left: 8px solid #52be80;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+        .code-inline {
+            background: #ecf3f9;
+            font-family: 'Courier New', monospace;
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            border: 1px solid #b3cfec;
+        }
+        .note {
+            background: #dcf2ea;
+            border-radius: 30px;
+            padding: 22px 32px;
+            margin: 35px 0;
+            border: 2px solid #219d8c;
+        }
+        .definition {
+            background: #d9ecfa;
+            padding: 14px 28px;
+            border-radius: 60px;
+            font-weight: 600;
+            margin: 25px 0;
+            display: inline-block;
+            border: 2px solid #3787b3;
+            font-size: 1.2rem;
+        }
+        ul, ol {
+            margin: 18px 0 25px 35px;
+        }
+        li {
+            margin: 12px 0;
+        }
+        hr {
+            margin: 50px 0 25px 0;
+            border: 2px solid #bdd9ec;
+        }
+        .symbol-tag {
+            background: #205b7a;
+            color: white;
+            border-radius: 40px;
+            padding: 5px 20px;
+            font-size: 1rem;
+            display: inline-block;
+            margin: 5px 5px 0 0;
+        }
+        footer {
+            margin-top: 70px;
+            text-align: center;
+            color: #588197;
+            font-size: 1.1rem;
+            border-top: 2px dashed #abd0e8;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- ========== UNIT III HEADER ========= -->
+    <h1>🌟 UNIT – III : INTRODUCTION TO C++</h1>
+    <p style="font-size:1.5rem; background:#c0e2f2; padding: 16px 30px; border-radius: 70px; font-weight:500;">
+        👉 “How to actually start writing programs in C++ language.”
+    </p>
+    <p>Before this you learned: what is programming, algorithm, logic.<br> Now: write real C++ code, take input, show output, use operators.</p>
+
+    <!-- ========== CHAPTER 9 : OVERVIEW OF C++ ========= -->
+    <h2>📘 Chapter 9 : Overview of C++</h2>
+
+    <h3>1️⃣ What is C++?</h3>
+    <p><strong>C++ is a programming language.</strong> A programming language is a special language used to give instructions to a computer.</p>
+    <div class="kid-friendly">
+        <strong>🧒 For a kid:</strong> Humans speak Hindi/English, computers understand only 0/1. C++ is like a translator – we write English-like instructions, and computer converts them to 0/1.
+    </div>
+
+    <h3>2️⃣ What does “High-Level Language” mean?</h3>
+    <ul>
+        <li><strong>Machine language</strong> → 0 and 1 (very hard for humans)</li>
+        <li><strong>High-level language</strong> → English-like (easy for humans)</li>
+    </ul>
+    <p>C++ is high-level because you can write <span class="code-inline">int age = 18;</span> instead of binary.</p>
+
+    <h3>3️⃣ If computer understands only 0 and 1, how does C++ work?</h3>
+    <p>Computer does NOT understand C++ directly. Something converts C++ to machine language → that’s a <strong>compiler</strong>.</p>
+    <div class="explain-box">
+        <strong>🧠 Compiler = translator + error checker.</strong> Takes your C++ program, checks for mistakes, converts to machine language.
+    </div>
+
+    <h3>4️⃣ What is a Compiler?</h3>
+    <p>Compiler is special software. Its job:</p>
+    <ul>
+        <li>Take C++ program written by you</li>
+        <li>Translate into machine language</li>
+        <li>Check for errors</li>
+        <li>Create an executable file</li>
+    </ul>
+
+    <h3>5️⃣ What is Compilation?</h3>
+    <p>Compilation = converting high‑level program into machine code.</p>
+    <ol>
+        <li>You write code.</li>
+        <li>Compiler checks syntax.</li>
+        <li>If correct → creates executable.</li>
+        <li>Program runs.</li>
+    </ol>
+    <p>If syntax is wrong → compilation fails.</p>
+
+    <h3>6️⃣ What is a Library?</h3>
+    <p><strong>Library = collection of ready-made code.</strong> Instead of writing code to print from scratch, C++ provides it in a library. We “include” that library.</p>
+
+    <h3>7️⃣ What is a Header File?</h3>
+    <p>In C++, libraries are included using header files.</p>
+    <div class="code-block">
+        #include&lt;iostream&gt;
+    </div>
+    <ul>
+        <li><span class="code-inline">#include</span> → “bring this file”</li>
+        <li><span class="code-inline">iostream</span> → header file (Input Output Stream) – contains definitions for <strong>cout</strong> and <strong>cin</strong>.</li>
+    </ul>
+    <p>Without it, you cannot use input/output.</p>
+
+    <h3>8️⃣ What is Stream?</h3>
+    <p><strong>Stream = flow of data.</strong> Like a water pipe. Data flows: keyboard → program → screen. <em>Input stream</em> = data coming in, <em>output stream</em> = data going out.</p>
+
+    <h3>9️⃣ What is “using namespace std;”?</h3>
+    <p>C++ standard library is named <strong>std</strong>. Inside it, things like cout, cin are defined.</p>
+    <p>If we do NOT write <span class="code-inline">using namespace std;</span> then we must write <span class="code-inline">std::cout</span> and <span class="code-inline">std::cin</span>. To write directly <strong>cout</strong>, we add this line.</p>
+
+    <h3>🔟 What is main() Function?</h3>
+    <p>Every C++ program must have <span class="code-inline">int main()</span>. Execution starts from main() – like the front door of a house.</p>
+
+    <h3>1️⃣1️⃣ What does int mean in int main()?</h3>
+    <p><span class="code-inline">int</span> means this function will return an integer value. Usually we return 0.</p>
+
+    <h3>1️⃣2️⃣ What does return 0 mean?</h3>
+    <p><span class="code-inline">return 0;</span> tells operating system: “Program finished successfully.” 0 means no error.</p>
+
+    <h3>1️⃣3️⃣ What are Curly Braces { }?</h3>
+    <p>Curly braces define block of code. Everything inside <span class="code-inline">{ }</span> belongs to main function.</p>
+
+    <h3>1️⃣4️⃣ What is a Statement?</h3>
+    <p>Statement = one instruction. Example: <span class="code-inline">cout &lt;&lt; "Hello";</span> Every statement ends with <strong>;</strong> (semicolon). Without semicolon → syntax error.</p>
+
+    <h3>1️⃣5️⃣ What are Tokens?</h3>
+    <p>Token = smallest part of program. In <span class="code-inline">int a = 5;</span> tokens are: <code>int</code>, <code>a</code>, <code>=</code>, <code>5</code>, <code>;</code></p>
+    <table>
+        <tr><th>Token type</th><th>Explanation / examples</th></tr>
+        <tr><td>Keywords</td><td>reserved words (int, float, if, else, return) – cannot use as variable names.</td></tr>
+        <tr><td>Identifiers</td><td>names given by programmer (age, marks, total). Rules: no start with digit, no space, no special chars except _, not a keyword.</td></tr>
+        <tr><td>Constants</td><td>fixed values (10, 3.14, 'A', "Hello") – do not change during execution.</td></tr>
+        <tr><td>Operators</td><td>+ , - , * , / , = etc.</td></tr>
+        <tr><td>Special symbols</td><td>{ } ( ) ; , etc.</td></tr>
+    </table>
+
+    <h4>Comments</h4>
+    <p>Notes for humans, ignored by computer.</p>
+    <ul>
+        <li><span class="code-inline">// single line</span></li>
+        <li><span class="code-inline">/* multi line */</span></li>
+    </ul>
+
+    <!-- ========== CHAPTER 10 : INPUT AND OUTPUT IN C++ ========= -->
+    <h2>📘 Chapter 10 : Input and Output in C++</h2>
+    <p>How program interacts with user.</p>
+
+    <h3>1️⃣ What is Output?</h3>
+    <p>Showing result on screen. In C++ we use <strong>cout</strong> (character output).</p>
+    <div class="code-block">
+        cout &lt;&lt; "Hello";
+    </div>
+    <p><span class="code-inline">&lt;&lt;</span> is <strong>insertion operator</strong> – inserts data into output stream.</p>
+    <h4>Multiple output (cascading)</h4>
+    <div class="code-block">
+        cout &lt;&lt; "Sum is " &lt;&lt; sum;
+    </div>
+
+    <h3>2️⃣ What is Input?</h3>
+    <p>Taking data from user. In C++ we use <strong>cin</strong> (character input).</p>
+    <div class="code-block">
+        cin &gt;&gt; age;
+    </div>
+    <p><span class="code-inline">&gt;&gt;</span> is <strong>extraction operator</strong> – extracts data from keyboard into variable.</p>
+
+    <h3>3️⃣ What are Escape Sequences?</h3>
+    <p>Used for formatting output.</p>
+    <table>
+        <tr><th>Escape sequence</th><th>Meaning</th></tr>
+        <tr><td>\n</td><td>new line</td></tr>
+        <tr><td>\t</td><td>horizontal tab</td></tr>
+        <tr><td>\"</td><td>double quote</td></tr>
+        <tr><td>\\</td><td>backslash</td></tr>
+    </table>
+    <div class="code-block">
+        cout &lt;&lt; "Hello\nWorld";
+        // prints:
+        // Hello
+        // World
+    </div>
+
+    <!-- ========== CHAPTER 11 : OPERATION IN C++ ========= -->
+    <h2>📘 Chapter 11 : Operation in C++</h2>
+    <p>Operations are actions performed on data using operators.</p>
+
+    <h3>1️⃣ Arithmetic Operators</h3>
+    <table>
+        <tr><th>Operator</th><th>Meaning</th><th>Example</th></tr>
+        <tr><td>+</td><td>addition</td><td>5+2 → 7</td></tr>
+        <tr><td>-</td><td>subtraction</td><td>5-2 → 3</td></tr>
+        <tr><td>*</td><td>multiplication</td><td>5*2 → 10</td></tr>
+        <tr><td>/</td><td>division</td><td>5/2 → 2 (integer division removes decimal)</td></tr>
+        <tr><td>%</td><td>remainder (modulo)</td><td>5%2 → 1</td></tr>
+    </table>
+    <div class="note"><strong>Important:</strong> Division between integers removes decimal part: 5/2 = 2 (not 2.5).</div>
+
+    <h3>2️⃣ Relational Operators</h3>
+    <p>Compare values; return 1 (true) or 0 (false).</p>
+    <table>
+        <tr><th>Operator</th><th>Meaning</th></tr>
+        <tr><td>&gt;</td><td>greater than</td></tr>
+        <tr><td>&lt;</td><td>less than</td></tr>
+        <tr><td>&gt;=</td><td>greater than or equal</td></tr>
+        <tr><td>&lt;=</td><td>less than or equal</td></tr>
+        <tr><td>==</td><td>equal to</td></tr>
+        <tr><td>!=</td><td>not equal</td></tr>
+    </table>
+    <p>Example: <span class="code-inline">5 &gt; 3</span> → 1, <span class="code-inline">5 &lt; 3</span> → 0.</p>
+
+    <h3>3️⃣ Logical Operators</h3>
+    <p>Combine conditions.</p>
+    <table>
+        <tr><th>Operator</th><th>Name</th><th>Explanation</th></tr>
+        <tr><td>&amp;&amp;</td><td>AND</td><td>both must be true</td></tr>
+        <tr><td>||</td><td>OR</td><td>at least one true</td></tr>
+        <tr><td>!</td><td>NOT</td><td>reverses result</td></tr>
+    </table>
+
+    <h3>4️⃣ Increment and Decrement</h3>
+    <ul>
+        <li><span class="code-inline">++</span> increases value by 1</li>
+        <li><span class="code-inline">--</span> decreases value by 1</li>
+    </ul>
+    <p><strong>Pre-increment:</strong> <span class="code-inline">++a</span> (increase first, then use)<br>
+    <strong>Post-increment:</strong> <span class="code-inline">a++</span> (use first, increase later)</p>
+
+    <h3>5️⃣ Assignment Operator</h3>
+    <p><span class="code-inline">=</span> assigns value. Example: <span class="code-inline">a = 5;</span> means store 5 inside a.</p>
+
+    <h3>6️⃣ Type Casting</h3>
+    <p>Converting one data type into another.</p>
+    <ul>
+        <li><strong>Implicit:</strong> <span class="code-inline">float x = 5;</span> → 5 becomes 5.0 automatically.</li>
+        <li><strong>Explicit:</strong> <span class="code-inline">int y = (int)3.5;</span> → y = 3 (decimal removed).</li>
+    </ul>
+
+    <h3>7️⃣ Operator Precedence</h3>
+    <p>When multiple operators, computer follows priority.</p>
+    <ol>
+        <li>( ) parentheses</li>
+        <li>++ --  (post/prefix)</li>
+        <li>* / %   (multiplication, division, modulo)</li>
+        <li>+ -      (addition, subtraction)</li>
+        <li>Relational (&lt; , &gt; , &lt;= , &gt;= , == , !=)</li>
+        <li>Logical &amp;&amp; then ||</li>
+        <li>Assignment =</li>
+    </ol>
+    <p>Example: <span class="code-inline">2 + 3 * 4</span> → multiplication first: 2 + 12 = 14.</p>
+
+    <!-- extra kid-friendly note -->
+    <div class="kid-friendly">
+        <strong>🧒 Little recap for you:</strong><br>
+        • <strong>cout</strong> &lt;&lt; "hello";  → shows things on screen<br>
+        • <strong>cin</strong> &gt;&gt; age;        → takes input from keyboard<br>
+        • <strong>operators</strong> (+, -, *, /) do math<br>
+        • <strong>%</strong> gives remainder<br>
+        • <strong>==</strong> asks “are they equal?”<br>
+        • <strong>#include &lt;iostream&gt;</strong> must be on top for cin/cout.
+    </div>
+
+    <hr>
+    <h3 style="color:#185277;">📌 Quick operator summary table</h3>
+    <table>
+        <tr><th>Type</th><th>Operators</th></tr>
+        <tr><td>Arithmetic</td><td>+  -  *  /  %</td></tr>
+        <tr><td>Relational</td><td>&lt;  &gt;  &lt;=  &gt;=  ==  !=</td></tr>
+        <tr><td>Logical</td><td>&amp;&amp;  ||  !</td></tr>
+        <tr><td>Increment/Decrement</td><td>++  --</td></tr>
+        <tr><td>Assignment</td><td>=</td></tr>
+    </table>
+
+    <footer>
+        ✅ UNIT III complete – C++ overview, input/output, operators. Now you're ready to write simple programs!
+    </footer>
+</div>
+</body>
+</html>
