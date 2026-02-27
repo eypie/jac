@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📘 Unit 4 – Programming in C++ (complete & simple)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #eaf3fa;
+            color: #1e3c4f;
+            line-height: 1.7;
+            padding: 30px 20px;
+        }
+        .page {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 36px;
+            box-shadow: 0 25px 50px rgba(8, 45, 70, 0.2);
+            padding: 50px 60px;
+        }
+        h1 {
+            font-size: 2.8rem;
+            color: #074b6e;
+            border-left: 14px solid #2897c7;
+            padding-left: 30px;
+            margin: 0 0 20px 0;
+            font-weight: 700;
+        }
+        h2 {
+            font-size: 2.4rem;
+            color: #17638a;
+            margin: 60px 0 25px 0;
+            border-bottom: 5px solid #c1ddf2;
+            padding-bottom: 12px;
+        }
+        h3 {
+            font-size: 2.0rem;
+            color: #1f729b;
+            margin: 45px 0 20px 0;
+        }
+        h4 {
+            font-size: 1.7rem;
+            color: #2c6b53;
+            margin: 35px 0 15px 0;
+        }
+        h5 {
+            font-size: 1.4rem;
+            color: #2d5880;
+            margin: 28px 0 10px 0;
+        }
+        p, li {
+            font-size: 1.18rem;
+            color: #1c3f52;
+        }
+        .explain {
+            background: #e1f2fd;
+            border-left: 12px solid #1d8fc5;
+            padding: 22px 32px;
+            border-radius: 28px;
+            margin: 30px 0;
+            font-weight: 460;
+            box-shadow: 0 6px 16px rgba(0,50,80,0.05);
+        }
+        .kid-corner {
+            background: #fff9e0;
+            border-radius: 30px;
+            padding: 22px 32px;
+            margin: 35px 0;
+            border: 3px dashed #e5a345;
+        }
+        .kid-corner strong {
+            color: #b25619;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0 40px 0;
+            font-size: 1.15rem;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 12px 28px rgba(0,50,80,0.15);
+        }
+        th {
+            background-color: #145e7e;
+            color: white;
+            font-weight: 600;
+            padding: 18px 22px;
+            text-align: left;
+            font-size: 1.2rem;
+        }
+        td {
+            background-color: #ffffff;
+            padding: 16px 22px;
+            border-bottom: 1px solid #c2def5;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        tr:hover td {
+            background-color: #e5f3ff;
+        }
+        .code-block {
+            background: #1f3342;
+            color: #ddf0dd;
+            font-family: 'Courier New', monospace;
+            padding: 20px 28px;
+            border-radius: 28px;
+            font-size: 1.18rem;
+            margin: 30px 0;
+            border-left: 10px solid #50b87a;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+        .code-inline {
+            background: #e2effa;
+            font-family: 'Courier New', monospace;
+            padding: 5px 16px;
+            border-radius: 40px;
+            font-size: 1.15rem;
+            border: 2px solid #b4d2ee;
+        }
+        .note {
+            background: #c9e9e0;
+            border-radius: 32px;
+            padding: 24px 36px;
+            margin: 40px 0;
+            border: 3px solid #1f9d86;
+        }
+        .definition {
+            background: #daecfc;
+            padding: 16px 32px;
+            border-radius: 70px;
+            font-weight: 600;
+            margin: 28px 0;
+            display: inline-block;
+            border: 3px solid #3182b3;
+            font-size: 1.3rem;
+        }
+        ul, ol {
+            margin: 20px 0 25px 40px;
+        }
+        li {
+            margin: 12px 0;
+        }
+        hr {
+            margin: 60px 0 30px 0;
+            border: 3px solid #bdd9ec;
+        }
+        .badge {
+            background: #287e8c;
+            color: white;
+            border-radius: 50px;
+            padding: 6px 22px;
+            font-size: 1.1rem;
+            display: inline-block;
+            margin: 5px 10px 0 0;
+        }
+        footer {
+            margin-top: 80px;
+            text-align: center;
+            color: #5f7f95;
+            font-size: 1.15rem;
+            border-top: 3px dashed #b1d4ed;
+            padding-top: 35px;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- UNIT IV HEADER -->
+    <h1>🌟 UNIT IV – PROGRAMMING IN C++</h1>
+    <p style="font-size:1.6rem; background:#bfe3f5; padding: 18px 35px; border-radius: 70px;">
+        👉 “How to make programs smart – decisions, loops, functions, arrays, strings, structures.”
+    </p>
+    <p>You already know: C++ basics, variables, input/output, operators. Now we go deeper.</p>
+
+    <!-- ========== CHAPTER 12: CONTROL STATEMENT ========= -->
+    <h2>📘 Chapter 12: Control Statement in C++</h2>
+    <p>By default program runs sequentially: Line1 → Line2 … But real programs need decisions & repetition.</p>
+    <div class="definition">Control statements “control” the flow of program.</div>
+
+    <h3>🔹 PART 1: Decision Making (Selection Statements)</h3>
+    <div class="kid-corner">
+        <strong>🧒 Real‑life example:</strong> If it is raining → take umbrella, else don’t. In programming, we use <strong>if</strong>.
+    </div>
+
+    <h4>🔸 What is a Condition?</h4>
+    <p>A condition is a question (e.g., <span class="code-inline">marks >= 40</span>). Answer can be <strong>true (1)</strong> or <strong>false (0)</strong>.</p>
+
+    <h4>🔸 if Statement</h4>
+    <div class="code-block">
+        if(condition) {
+            statements;
+        }
+    </div>
+    <p>If condition true → runs block; false → skips.</p>
+    <p><strong>Example:</strong><br>
+    <span class="code-inline">if (marks >= 40) { cout &lt;&lt; "Pass"; }</span><br>
+    marks = 50 → prints Pass; marks = 20 → prints nothing.</p>
+
+    <h4>🔸 if-else Statement</h4>
+    <div class="code-block">
+        if (marks >= 40) {
+            cout &lt;&lt; "Pass";
+        } else {
+            cout &lt;&lt; "Fail";
+        }
+    </div>
+    <p>One block always runs.</p>
+
+    <h4>🔸 Nested if</h4>
+    <p>One if inside another – decisions depend on other decisions.</p>
+
+    <h4>🔸 switch Statement</h4>
+    <p>Compare one variable with many fixed values.</p>
+    <div class="code-block">
+        switch(day) {
+            case 1: cout&lt;&lt;"Monday"; break;
+            case 2: cout&lt;&lt;"Tuesday"; break;
+            default: cout&lt;&lt;"Invalid";
+        }
+    </div>
+    <p><span class="code-inline">break</span> stops switch; without it → “fall through”.</p>
+
+    <h3>🔹 PART 2: Loops (Repetition)</h3>
+    <p>Instead of writing 100 cout lines, use loop to repeat until condition false.</p>
+
+    <h4>🔸 while Loop</h4>
+    <div class="code-block">
+        int i = 1;
+        while(i <= 5) {
+            cout &lt;&lt; i;
+            i++;
+        }
+    </div>
+    <p>1. Check condition. 2. If true → run block, go back. 3. If false → exit.</p>
+
+    <h4>🔸 do-while Loop</h4>
+    <div class="code-block">
+        do {
+            statements;
+        } while(condition);
+    </div>
+    <p>Runs <strong>at least once</strong> (block runs first, then checks).</p>
+
+    <h4>🔸 for Loop</h4>
+    <div class="code-block">
+        for(initialization; condition; update) {
+            statements;
+        }
+    </div>
+    <p>Example: <span class="code-inline">for(int i=1; i<=5; i++) { cout&lt;&lt;i; }</span></p>
+    <table>
+        <tr><th>Part</th><th>Meaning</th></tr>
+        <tr><td>initialization</td><td>i=1 (starting point)</td></tr>
+        <tr><td>condition</td><td>i<=5 (loop until false)</td></tr>
+        <tr><td>update</td><td>i++ (change each round)</td></tr>
+    </table>
+
+    <h4>🔸 break and continue</h4>
+    <ul>
+        <li><span class="code-inline">break</span> → stops loop immediately.</li>
+        <li><span class="code-inline">continue</span> → skips current round, goes to next iteration.</li>
+    </ul>
+
+    <!-- ========== CHAPTER 13: DEVICE AND CHARACTER I/O ========= -->
+    <h2>📘 Chapter 13: Device and Character I/O</h2>
+    <p><strong>Device</strong> = physical hardware (keyboard input, monitor output).</p>
+    <p><strong>Character I/O</strong> – single letter/symbol: 'A', '?', '%'</p>
+    <table>
+        <tr><th>Function</th><th>Description</th></tr>
+        <tr><td>getchar()</td><td>Reads one character from keyboard</td></tr>
+        <tr><td>putchar()</td><td>Prints one character to screen</td></tr>
+        <tr><td>getch()</td><td>Reads one character, does NOT show on screen</td></tr>
+        <tr><td>getche()</td><td>Reads one character, shows on screen</td></tr>
+    </table>
+    <div class="explain">Used mostly in old console programs, but helpful to understand input streaming.</div>
+
+    <!-- ========== CHAPTER 14: LIBRARY FUNCTION AND HEADER FILES ========= -->
+    <h2>📘 Chapter 14: Library Function and Header Files</h2>
+    <p><strong>Library function</strong> = ready-made function written by C++ creators (e.g., <span class="code-inline">sqrt(25)</span>).</p>
+    <ul>
+        <li>Saves time</li>
+        <li>Reduces mistakes</li>
+        <li>Makes program shorter</li>
+    </ul>
+    <h4>Common Header Files</h4>
+    <table>
+        <tr><th>Header file</th><th>Contains</th></tr>
+        <tr><td>&lt;iostream&gt;</td><td>input/output (cin, cout)</td></tr>
+        <tr><td>&lt;math.h&gt; or &lt;cmath&gt;</td><td>math functions (sqrt, pow)</td></tr>
+        <tr><td>&lt;string.h&gt; or &lt;cstring&gt;</td><td>string functions (strlen, strcpy)</td></tr>
+        <tr><td>&lt;ctype.h&gt;</td><td>character checking (isalpha, isdigit)</td></tr>
+    </table>
+
+    <!-- ========== CHAPTER 15: FUNCTION IN C++ ========= -->
+    <h2>📘 Chapter 15: Function in C++</h2>
+    <p><strong>Function</strong> = block of code that performs a specific task. (Like calculator buttons.)</p>
+    <h4>Why Functions?</h4>
+    <ul>
+        <li>Avoid repeating code</li>
+        <li>Organized program</li>
+        <li>Easy to test</li>
+    </ul>
+    <h4>Parts of a Function</h4>
+    <ol>
+        <li><strong>Declaration</strong> (prototype) – tells compiler function exists.</li>
+        <li><strong>Definition</strong> – actual code of function.</li>
+        <li><strong>Call</strong> – using the function (control goes there and returns).</li>
+    </ol>
+    <h4>Call by Value</h4>
+    <p>Function receives a copy – original variable safe.</p>
+    <h4>Call by Reference</h4>
+    <p>Function receives original – changes affect original.</p>
+    <div class="code-block">
+        // Call by value example
+        void increment(int x) { x++; }   // copy, original unchanged
+
+        // Call by reference
+        void increment(int &x) { x++; }  // original changes
+    </div>
+
+    <!-- ========== CHAPTER 16: ARRAYS IN C++ ========= -->
+    <h2>📘 Chapter 16: Arrays in C++</h2>
+    <p>To store 100 marks, instead of 100 variables → use <strong>array</strong>.</p>
+    <div class="definition">Array = collection of same type variables stored together.</div>
+    <p><span class="code-inline">int marks[5];</span> → creates 5 integer spaces. Index starts from <strong>0</strong>.</p>
+    <table>
+        <tr><th>Element</th><th>marks[0]</th><th>marks[1]</th><th>marks[2]</th><th>marks[3]</th><th>marks[4]</th></tr>
+        <tr><td>Index</td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+    </table>
+    <p>Why index 0? Because memory counting starts from base address – first element offset is 0.</p>
+
+    <h4>2D Array (like table)</h4>
+    <p><span class="code-inline">int matrix[2][3];</span> → 2 rows, 3 columns → total 6 elements.</p>
+
+    <!-- ========== CHAPTER 17: STRING HANDLING IN C++ ========= -->
+    <h2>📘 Chapter 17: String Handling in C++</h2>
+    <p><strong>String</strong> = group of characters, e.g., "Hello". In C++, string is character array ending with <strong>'\0'</strong> (null character).</p>
+    <h4>String Functions (from &lt;cstring&gt;)</h4>
+    <table>
+        <tr><th>Function</th><th>Action</th></tr>
+        <tr><td>strlen(s)</td><td>returns length of string s</td></tr>
+        <tr><td>strcpy(dest, src)</td><td>copies src into dest</td></tr>
+        <tr><td>strcat(s1, s2)</td><td>joins s2 at end of s1</td></tr>
+        <tr><td>strcmp(s1, s2)</td><td>compares; 0 if equal</td></tr>
+    </table>
+
+    <!-- ========== CHAPTER 18: DATA STRUCTURE IN C++ ========= -->
+    <h2>📘 Chapter 18: Data Structure in C++ (struct)</h2>
+    <p><strong>Structure</strong> allows combining different data types.</p>
+    <div class="code-block">
+        struct Student {
+            int roll;
+            char name[30];
+            float marks;
+        };
+
+        Student s1;          // create variable
+        s1.roll = 101;       // access using dot (.)
+    </div>
+    <p>Dot operator <span class="code-inline">.</span> connects variable and member.</p>
+
+    <!-- extra summary note -->
+    <div class="note">
+        <strong>📌 Quick overview – Unit IV (smart programs)</strong><br>
+        • <strong>Decision:</strong> if, if-else, switch<br>
+        • <strong>Loops:</strong> while, do-while, for (break/continue)<br>
+        • <strong>Functions:</strong> reuse code, call by value/reference<br>
+        • <strong>Arrays:</strong> marks[100] – index from 0<br>
+        • <strong>Strings:</strong> "Hello" + null char, functions: strlen, strcpy…<br>
+        • <strong>struct</strong>: group different types (roll, name, marks)
+    </div>
+
+    <!-- one more detailed table for control structures -->
+    <h3 style="margin-top:50px;">📋 Control structures – quick glance</h3>
+    <table>
+        <tr><th>Type</th><th>Statements</th><th>Use case</th></tr>
+        <tr><td>Selection</td><td>if, if-else, nested if, switch</td><td>decision making</td></tr>
+        <tr><td>Iteration</td><td>while, do-while, for</td><td>repetition</td></tr>
+        <tr><td>Jump</td><td>break, continue, goto (rare)</td><td>alter flow</td></tr>
+    </table>
+
+    <hr>
+    <div class="kid-corner">
+        <strong>🧒 Little recap for you:</strong><br>
+        • <strong>if</strong> → helps computer decide<br>
+        • <strong>while/for</strong> → repeat without writing same code again<br>
+        • <strong>array</strong> → list of same things (like 100 lockers)<br>
+        • <strong>string</strong> → word made from characters, ends with \0<br>
+        • <strong>struct</strong> → make your own custom type with mixed info (roll + name + marks)
+    </div>
+
+    <footer>
+        ✅ UNIT IV complete – now you can write smarter C++ programs with decisions, loops, functions, arrays, strings & structures.
+    </footer>
+</div>
+</body>
+</html>
